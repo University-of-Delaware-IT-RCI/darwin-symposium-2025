@@ -21,7 +21,7 @@ fi
 xn=${1}
 
 X_file="$(mktemp)"
-cat job-mapping | sed -r 's/^.*parameters": \{"A_N2":([0-9.]+),[^:]+:([0-9.]+).*$/\2,\1/' > "$X_file"
+cat job-mapping | sed -r 's/^.*parameters": \{"r":([0-9.]+).*$/\1/' > "$X_file"
 
 E_file="$(mktemp)"
 for x in $(seq $x0 $xn); do grep 'complexation energy.*corrected' ./jobs/$x/N2-N2.log; done | awk '{print $4;}' > "$E_file"
