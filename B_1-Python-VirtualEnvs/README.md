@@ -22,7 +22,7 @@ The resulting array job `N2-N2-array.qs` is then submitted to Slurm from that wo
 Once the job has completed all indices, the data can be extracted:
 
 ```
-$ ./extract.sh 1 31
+$ ./extract.sh 1 31 > tee data.csv
 $ ls -l data.csv
 total 355
 -rw-r--r--  1 frey it_nss   330 Jan 28 17:24 data.csv
