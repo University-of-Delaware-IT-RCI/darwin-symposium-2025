@@ -11,6 +11,12 @@ $ job-templating-tool -vv --parameter r=0.3-8.0:+0.25 \
      N2-N2.com
 ```
 
+A directory for the Slurm stdout/stderr files is needed:
+
+```
+$ mkdir logs
+```
+
 The resulting array job `N2-N2-array.qs` is then submitted to Slurm from that working directory.
 
 Once the job has completed all indices, the data can be extracted:
